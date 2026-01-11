@@ -76,7 +76,7 @@ Cấu hình đồng thời GLM + Antigravity + các provider khác.
 ## Liên hệ
 
 - **YouTube:** [Diginno](https://youtube.com/@diginno)
-- **Video hướng dẫn:** [Link video]
+- **Video hướng dẫn:** [OpenCode Setup](https://www.youtube.com/watch?v=BQIWeEoBBAg)
 
 ---
 
