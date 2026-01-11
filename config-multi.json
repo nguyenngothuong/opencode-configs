@@ -13,7 +13,7 @@
     "glm": {
       "npm": "@ai-sdk/openai-compatible",
       "options": {
-        "baseURL": "https://open.bigmodel.cn/api/paas/v4",
+        "baseURL": "https://open.z.ai/api/paas/v4",
         "apiKey": "YOUR_GLM_API_KEY_HERE"
       },
       "models": {

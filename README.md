@@ -49,7 +49,7 @@ File: [`config-glm.json`](./config-glm.json)
 GLM-4.7 thinking model, giá cực rẻ, chất lượng tốt (~8/10 so với Claude).
 
 **Setup:**
-1. Đăng ký tại [open.bigmodel.cn](https://open.bigmodel.cn)
+1. Đăng ký tại [z.ai/subscribe](https://z.ai/subscribe)
 2. Lấy API key
 3. Thay `YOUR_API_KEY_HERE` trong config
 4. Chạy `opencode`
