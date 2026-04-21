@@ -1,0 +1,87 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "mcp": {
+    "MiniMax": {
+      "type": "local",
+      "command": ["uvx", "minimax-coding-plan-mcp", "-y"],
+      "environment": {
+        "MINIMAX_API_KEY": "YOUR_MINIMAX_API_KEY",
+        "MINIMAX_API_HOST": "https://api.minimax.io"
+      },
+      "enabled": true
+    }
+  },
+  "provider": {
+    "minimax": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "MiniMax",
+      "options": {
+        "baseURL": "https://api.minimax.io/anthropic/v1",
+        "apiKey": "YOUR_MINIMAX_API_KEY"
+      },
+      "models": {
+        "MiniMax-M2.7-highspeed": {
+          "name": "MiniMax-M2.7-highspeed"
+        }
+      }
+    },
+    "bailian-coding-plan": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "Model Studio Coding Plan",
+      "options": {
+        "baseURL": "https://coding-intl.dashscope.aliyuncs.com/apps/anthropic/v1",
+        "apiKey": "YOUR_ALIYUN_API_KEY"
+      },
+      "models": {
+        "qwen3.6-plus": {
+          "name": "Qwen3.6 Plus",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 8192
+            }
+          },
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          }
+        },
+        "qwen3-coder-plus": {
+          "name": "Qwen3 Coder Plus",
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          },
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          }
+        },
+        "kimi-k2.5": {
+          "name": "Kimi K2.5",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 8192
+            }
+          },
+          "limit": {
+            "context": 262144,
+            "output": 32768
+          }
+        }
+      }
+    }
+  },
+  "model": "bailian-coding-plan/qwen3.6-plus",
+  "small_model": "minimax/MiniMax-M2.7-highspeed"
+}
